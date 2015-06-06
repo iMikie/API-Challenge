@@ -8,7 +8,7 @@ FactoryGirl.define do
     bio { Faker::Lorem.paragraph }
   end
 
-  factory :post do
+  factory :article do
     title { Faker::Lorem.word }
     body { Faker::Lorem.paragraph }
     user
@@ -17,6 +17,6 @@ FactoryGirl.define do
   factory :comment do
     body { Faker::Lorem.paragraph }
     user
-    post
+    article
   end
 end

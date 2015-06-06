@@ -2,9 +2,9 @@ require_relative '../spec/factories'
 10.times {
   user = FactoryGirl.create :user
   rand(6).times {
-    post = FactoryGirl.create :post, :user => user
+    article = FactoryGirl.create :article, :user => user
     rand(10).times {
-      FactoryGirl.create :comment, :user => user, :post => post
+      FactoryGirl.create :comment, :user => user, :article => article
     }
   }
 }
