@@ -6,17 +6,12 @@
 
 ## Summary
 
-Design and document a simple web API against a hacker news clone. The models 
-already exist, it will be up to you to write Sinatra routes to manipulate data 
+* Design and document a simple web API against a hacker news clone. 
+
+* The models already exist,  write Sinatra routes to manipulate data 
 (using the CRUD HTTP verbs: `GET`, `POST`, `PUT`, and `DELETE`).
 
-This API is meant to be consumed by the public. Think about how Twitter or
-Github built their API against their app(s). You will be wearing your API 
-designer/architect hats and thinking about how you want to expose data and 
-services to the public just like Twitter and Github developers did.
 
-
-## Endpoints ([what's an API Endpoint?](http://bit.ly/1jIgbNw))
 ## Simplest  API: no deleting, no updating 
 
 
