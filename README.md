@@ -17,12 +17,63 @@ services to the public just like Twitter and Github developers did.
 
 
 ## Endpoints ([what's an API Endpoint?](http://bit.ly/1jIgbNw))
-- [GET] API key
-- [GET] list of users
-- [GET] list of articles
-- [GET] list of comments for a user
-- [POST] create a new article by a user
-- [POST] create a new comment for an article (a comment is owned by a user)
+## Simplest  API: no deleting, no updating 
+
+
+ 
+### User
+ * Get an **API-user Key**, validate on login
+  
+```ruby
+      POST /v1/login
+```
+
+  * List Users
+  
+```ruby
+      GET /v1/users
+```
+
+###Article
+* List Articles 
+  
+```ruby
+      GET /v1/articles
+```
+
+* List Article by User
+
+```ruby
+      GET /v1/articles/:user_id
+```
+
+* Create new Article (user_id = current user)
+  
+```ruby
+      POST /v1/articles
+```
+
+###Comments
+* List Comments for Article
+  
+```ruby
+      GET /v1/Comments/:article_id
+```
+
+* List Comments for User (current user only?)
+
+```ruby
+      GET /v1/comments/:user_id
+```
+
+
+  * Create a new Comment (user_id = current user)
+  
+```ruby
+      POST /v1/comments
+```
+
+
 
 ## Statuses
 It is important to always send back the appropriate status codes with your API response.
