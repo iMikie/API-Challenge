@@ -39,33 +39,33 @@
 * List Article by User
 
 ```ruby
-      GET /v1/articles/:user_id
+      GET /v1/users/:user_id/articles
 ```
 
 * Create new Article (user_id = current user)
   
 ```ruby
-      POST /v1/articles
+      POST /v1/users/:user_id/articles
 ```
 
 ###Comments
 * List Comments for Article
   
 ```ruby
-      GET /v1/Comments/:article_id
+      GET /v1/articles/:article_id/comments/
 ```
 
 * List Comments for User (current user only?)
 
 ```ruby
-      GET /v1/comments/:user_id
+      GET /v1/users/:user_id/comments
 ```
 
 
   * Create a new Comment (user_id = current user)
   
 ```ruby
-      POST /v1/comments
+      POST /v1/users/:user_id/articles/:article_id/comments
 ```
 
 
