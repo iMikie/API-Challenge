@@ -12,10 +12,19 @@ require 'shoulda-matchers'
 require 'rack/test'
 require 'capybara'
 require 'capybara/rspec'
+require File.expand_path('../factories', __FILE__)
+
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
+  config.before do
+    User.delete_all
+    Article.delete_all
+    Comment.delete_all
+    ApiKey.delete_all
+  end
 end
+
 
 def app
   Sinatra::Application
