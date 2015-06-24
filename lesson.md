@@ -6,69 +6,23 @@
 
 ## Summary
 
-* Design and document a simple web API against a hacker news clone. 
-
-* The models already exist,  write Sinatra routes to manipulate data 
+Design and document a simple web API against a hacker news clone. The models 
+already exist, it will be up to you to write Sinatra routes to manipulate data 
 (using the CRUD HTTP verbs: `GET`, `POST`, `PUT`, and `DELETE`).
 
-
-## Simplest  API: no deleting, no updating 
-
-
- 
-### User
- * Get an **API-user Key**, validate on login
-  
-```ruby
-      POST /v1/login
-```
-
-  * List Users
-  
-```ruby
-      GET /v1/users
-```
-
-###Article
-* List Articles 
-  
-```ruby
-      GET /v1/articles
-```
-
-* List Article by User
-
-```ruby
-      GET /v1/users/:user_id/articles
-```
-
-* Create new Article (user_id = current user)
-  
-```ruby
-      POST /v1/users/:user_id/articles
-```
-
-###Comments
-* List Comments for Article
-  
-```ruby
-      GET /v1/articles/:article_id/comments/
-```
-
-* List Comments for User (current user only?)
-
-```ruby
-      GET /v1/users/:user_id/comments
-```
+This API is meant to be consumed by the public. Think about how Twitter or
+Github built their API against their app(s). You will be wearing your API 
+designer/architect hats and thinking about how you want to expose data and 
+services to the public just like Twitter and Github developers did.
 
 
-  * Create a new Comment (user_id = current user)
-  
-```ruby
-      POST /v1/users/:user_id/articles/:article_id/comments
-```
-
-
+## Endpoints ([what's an API Endpoint?](http://bit.ly/1jIgbNw))
+- [GET] API key
+- [GET] list of users
+- [GET] list of articles
+- [GET] list of comments for a user
+- [POST] create a new article by a user
+- [POST] create a new comment for an article (a comment is owned by a user)
 
 ## Statuses
 It is important to always send back the appropriate status codes with your API response.
